@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-box{
+    width: 400px;
+    margin: 100px auto;
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+h2{
+    margin: 0 auto;
+}
+
+#firstName,
+#lastName,
+#email,
+#password,
+#checkbox,
+#signUp{
+    width: 400px;
+    height: 30px;
+    margin-top: 15px;
+    padding-left: 10px;
+    border: 2px solid silver;
+    border-radius: 5px;
+    outline: none;
+}
+
+#firstName:hover{
+    border: 2px solid skyblue;
+}
+
+#checkbox{
+    width: 15px;
+    height: 15px;
+    
+}
+
+label{
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+#signUp{
+    padding-left: 0;
+    color: #fff;
+    background-color: skyblue;
+    border: none;
+}

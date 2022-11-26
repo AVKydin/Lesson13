@@ -9,11 +9,18 @@
 </head>
 <body>
 
-    <form class="f">
-        <input type="text" id="login" pattern="\w{4,10}" required>
-        <input type="text" id="password" pattern="[a-zA-Z0-9_@#&]{6,16}" required>
-        <input type="submit" value="signIn" id="signIn" disabled>
-    </form>
+    <div class="form-box">
+        <form class="form">
+            <h2>Please sign up</h2>
+            <input type="text" id="firstName" placeholder="First name">
+            <input type="text" id="lastName" placeholder="Last name">
+            <input type="text" id="email" placeholder="Email adress">
+            <input type="text" id="password" placeholder="Password">
+            <input type="checkbox" id="checkbox" name="checkbox">
+            <label for="checkbox"><span name="checkbox">I agree with Privacy Polisy.</span></label>
+            <input type="submit" value="Sign Up" id="signUp" disabled>
+        </form>
+    </div>
 
     <script src="./main.js"></script>
 </body>
