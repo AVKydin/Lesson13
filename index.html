@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    
+
+    <form class="f">
+        <input type="text" id="login" pattern="\w{4,10}" required>
+        <input type="text" id="password" pattern="[a-zA-Z0-9_@#&]{6,16}" required>
+        <input type="submit" value="signIn" id="signIn" disabled>
+    </form>
 
     <script src="./main.js"></script>
 </body>
