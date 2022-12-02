@@ -182,10 +182,10 @@
 // console.log(regExp.test("+38(063)-1111-22-33"));
 // console.log(regExp.test("+39(063)-1111-22-33"));
 
-let loginRegExp = /^\w{4,10}$/;
-let passwordRegExp = /^[a-zA-Z0-9_@#&]{6,16}$/;
+// let loginRegExp = /^\w{4,10}$/;
+// let passwordRegExp = /^[a-zA-Z0-9_@#&]{6,16}$/;
 
-let getId = id => document.getElementById(id);
+// let getId = id => document.getElementById(id);
 // getId("signIn").onclick = function () {
 //     let testLogin = loginRegExp.test(getId('login').value);
 //     let testPassword = passwordRegExp.test(getId("password").value);
@@ -216,3 +216,41 @@ let getId = id => document.getElementById(id);
 //     }
 //     console.log(this.validity.valid);
 // };
+
+
+let loginRegExp = /^[a-zA-Z]{2,20}$/;
+let passwordRegExp = /^[a-zA-Z0-9_@#&]{6,16}$/;
+
+let getId = (id) => document.getElementById(id);
+
+// input firstName
+
+getId("firstName").oninput = function () {
+    let firstName = loginRegExp.test(getId("firstName").value);
+    if (firstName) {
+        getId("pFirstName").style.display = "none";
+        getId("greenFirst").style.display = "block";
+        this.style.border = "2px solid green";
+    } else {
+        getId("pFirstName").style.display = "block";
+        getId("greenFirst").style.display = "none";
+        getId("redFirst").style.display = "block";
+        this.style.border = "2px solid red";
+    }
+};
+
+// input lastName
+
+getId("lastName").oninput = function () {
+    let lastName = loginRegExp.test(getId("lastName").value);
+    if (lastName) {
+        getId("pLastName").style.display = "none";
+        getId("greenLast").style.display = "block";
+        this.style.border = "2px solid green";
+    } else {
+        getId("pLastName").style.display = "block";
+        getId("greenLast").style.display = "none";
+        getId("redLast").style.display = "block";
+        this.style.border = "2px solid red";
+    }
+};

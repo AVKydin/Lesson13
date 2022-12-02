@@ -17,12 +17,14 @@ body{
 .form{
     display: flex;
     flex-wrap: wrap;
-
+    position: relative;
 }
 
 h2{
     margin: 0 auto;
 }
+
+
 
 #firstName,
 #lastName,
@@ -31,17 +33,52 @@ h2{
 #checkbox,
 #signUp{
     width: 400px;
-    height: 30px;
-    margin-top: 15px;
+    height: 50px;
+    margin-top: 25px;
     padding-left: 10px;
     border: 2px solid silver;
     border-radius: 5px;
     outline: none;
+    position: relative;
 }
 
 #firstName:hover{
     border: 2px solid skyblue;
 }
+
+#redFirst,
+#greenFirst{
+    position: absolute;
+    width: 20px;
+    top: 70px;
+    right: 10px;
+    display: none;
+}
+
+#redLast,
+#greenLast{
+    position: absolute;
+    width: 20px;
+    top: 145px;
+    right: 10px;
+    display: none;
+}
+
+
+#pFirstName,
+#pLastName{
+    top: 103px;
+    font-size: 14px;
+    height: 25px;
+    margin-bottom: -25px;
+    padding: 5px;
+    color: white;
+    background-color: crimson;
+    border-radius: 3px;
+    display: none;
+}
+
+
 
 #checkbox{
     width: 15px;
