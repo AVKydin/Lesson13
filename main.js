@@ -216,17 +216,19 @@
 //     }
 //     console.log(this.validity.valid);
 // };
+// let loginRegExp = /^\w{4,10}$/;
 
-
-let loginRegExp = /^[a-zA-Z]{2,20}$/;
-let passwordRegExp = /^[a-zA-Z0-9_@#&]{6,16}$/;
+let firstNameRegExp = /^[a-zA-Z]{2,20}$/;
+let lastNameRegExp = /^[a-zA-Z]{2,20}$/;
+let emailRegExp = /\w*\d*\.*@\w*.\w*/;
+let passwordRegExp = /^[a-zA-Z0-9]{8,15}$/;
 
 let getId = (id) => document.getElementById(id);
 
 // input firstName
 
 getId("firstName").oninput = function () {
-    let firstName = loginRegExp.test(getId("firstName").value);
+    let firstName = firstNameRegExp.test(getId("firstName").value);
     if (firstName) {
         getId("pFirstName").style.display = "none";
         getId("greenFirst").style.display = "block";
@@ -242,7 +244,7 @@ getId("firstName").oninput = function () {
 // input lastName
 
 getId("lastName").oninput = function () {
-    let lastName = loginRegExp.test(getId("lastName").value);
+    let lastName = lastNameRegExp.test(getId("lastName").value);
     if (lastName) {
         getId("pLastName").style.display = "none";
         getId("greenLast").style.display = "block";
@@ -253,4 +255,36 @@ getId("lastName").oninput = function () {
         getId("redLast").style.display = "block";
         this.style.border = "2px solid red";
     }
+};
+
+// input Email adress
+
+getId("email").oninput = function () {
+  let email = emailRegExp.test(getId("email").value);
+  if (email) {
+    getId("pEmailAdress").style.display = "none";
+    getId("greenEmail").style.display = "block";
+    this.style.border = "2px solid green";
+  } else {
+    getId("pEmailAdress").style.display = "block";
+    getId("greenEmail").style.display = "none";
+    getId("redEmail").style.display = "block";
+    this.style.border = "2px solid red";
+  }
+};
+
+// input password
+
+getId("password").oninput = function () {
+  let password = passwordRegExp.test(getId("password").value);
+  if (password) {
+    getId("pPassword").style.display = "none";
+    getId("greenPassword").style.display = "block";
+    this.style.border = "2px solid green";
+  } else {
+    getId("pPassword").style.display = "block";
+    getId("greenPassword").style.display = "none";
+    getId("redPassword").style.display = "block";
+    this.style.border = "2px solid red";
+  }
 };
