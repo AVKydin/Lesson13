@@ -10,7 +10,7 @@
 <body>
 
     <div class="form-box">
-        <form class="form">
+        <form id="form" class="form" onsubmit="return false;">
             <h2>Please sign up</h2>
             <input type="text" id="firstName" placeholder="First name"><img id="redFirst" src="./img/red.png" alt=""><img id="greenFirst" src="./img/green.png" alt="">
             <p id="pFirstName">Please provide a valid First name.</p>
@@ -24,6 +24,17 @@
             <label for="checkbox"><span name="checkbox">I agree with Privacy Polisy.</span></label>
             <input type="submit" value="Sign Up" id="signUp" disabled>
         </form>
+    </div>
+
+    <div id="modal">
+        <div class="img">
+            <img src="./img/white.png" alt="white">
+        </div>
+        <div class="text">
+            <h3>Great!</h3>
+            <p>Your account has been successfully.</p>
+            <button id="btn" class="btn">Start Exploring &#10132</button>
+        </div>
     </div>
 
     <script src="./main.js"></script>
